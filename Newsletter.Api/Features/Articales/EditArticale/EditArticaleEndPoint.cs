@@ -4,17 +4,18 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Newsletter.Api.Extentions;
 
-namespace Newsletter.Api.Features.Articales.CreateArticale
+namespace Newsletter.Api.Features.Articales.EditArticale
 {
-    public  class CreateArticaleEndPoint: ICarterModule  
+    public  class EditArticaleEndPoint:ICarterModule 
     {
        
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            app.MapPost("api/articales", async ([FromBody] CreateArticaleRequest request, IMediator mediator) =>
+          
+            app.MapPut("api/articales", async ([FromBody] EditArticaleRequest request, IMediator mediator) =>
             {
                 var result = await mediator.Send(request);
-                return result.GetResponse();
+                return  result.GetResponse();
             });
         }
     }

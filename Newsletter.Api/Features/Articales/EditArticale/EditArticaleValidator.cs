@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace Newsletter.Api.Features.Articales.CreateArticale
+namespace Newsletter.Api.Features.Articales.EditArticale
 {
-    public class CreateArticaleValidator : AbstractValidator<CreateArticaleRequest>
+    public class EditArticaleValidator:AbstractValidator<EditArticaleRequest>
     {
-        public CreateArticaleValidator() { 
+        public EditArticaleValidator() { 
             RuleFor(x=>x.Title)
                 .NotNull()
                 .NotEmpty()

@@ -147,5 +147,6 @@ namespace Newsletter.Api.Shared
                 Message = message is null ? "Unprocessable Entity" : message
             };
         }
+
     }
 }
